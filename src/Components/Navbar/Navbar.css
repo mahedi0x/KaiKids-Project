@@ -14,7 +14,9 @@
 
 a.active  {
     color: #1da597;
+    background: rgba(29, 165, 151, 0.1);
 }
+
 .button a.active{
     background: #2e4a33;
     color: white;

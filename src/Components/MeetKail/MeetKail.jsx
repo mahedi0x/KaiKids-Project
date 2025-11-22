@@ -4,7 +4,7 @@ import kaishifImg from "../../assets/imges/kaishif.png";
 
 const MeetKail = () => {
   return (
-    <section className="py-10 px-6 md:py-10 lg:py-20 bg-gradient-to-b from-[#f8f5ec] via-white to-[#f8f5ec] overflow-hidden">
+    <section className="py-10 px-4 md:py-10 lg:py-20 bg-gradient-to-b from-[#f8f5ec] via-white to-[#f8f5ec] overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* Main Title */}
@@ -73,20 +73,18 @@ const MeetKail = () => {
 
             {/* TEXT — Mobile & Tablet Second */}
             <div className="space-y-6 text-center lg:text-left order-2 lg:order-none">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1da597]">
+              <h3 className="text-3xl sm:text-3xl md:text-4xl font-bold text-[#1da597]">
                 The Heart of KaiShifAI
               </h3>
 
-              <p className="text-xl sm:text-xl md:text-xl text-gray-700 leading-relaxed font-medium">
-                Kail is more than a friend — they're your child's{" "}
-                <span className="text-[#1da597] font-bold">gentle guide</span> through feelings, fears, and big emotions.
+              <p className="text-base sm:text-xl md:text-xl text-gray-700 leading-relaxed ">
+                Kail is more than a friend they're your child's
+               gentle guide through feelings, fears, and big emotions.
               </p>
 
               <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
-                With soft words, playful riddles, and endless kindness, Kail helps little hearts discover{" "}
-                <span className="font-bold text-[#1da597]">courage</span>, find{" "}
-                <span className="font-bold text-[#1da597]">calm</span>, and grow in{" "}
-                <span className="font-bold text-[#1da597]">love</span> — one smile at a time.
+                With soft words, playful riddles, and endless kindness, Kail helps little hearts discover courage, find calm, and grow in love one smile at a time{" "}
+                
               </p>
 
               <motion.div
@@ -96,7 +94,7 @@ const MeetKail = () => {
                 transition={{ delay: 0.5 }}
                 className="mt-10 p-5 sm:p-6 md:p-4 bg-[#1da597]/10 rounded-3xl border-2 border-dashed border-[#1da597]/30"
               >
-                <p className="text-base sm:text-lg md:text-xl italic text-[#1da597] font-semibold leading-relaxed">
+                <p className="text-base sm:text-xl md:text-xl italic text-[#1da597] font-semibold leading-relaxed">
                   “I’m here with you, always. You’re never alone.” — Kail
                 </p>
               </motion.div>

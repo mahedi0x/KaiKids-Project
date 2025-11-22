@@ -9,98 +9,88 @@ import {
   FaBars,
 } from "react-icons/fa";
 
-import "./Navbar.css";
+import "./Navbar.css"
 
 const Navbar = () => {
-  const cuteLinkStyle =
-    "mx-2 text-xl flex items-center gap-2 transition-all duration-300 mx-auto" +
-    "hover:scale-110 hover:text-[#1da597] px-2 relative";
+  const linkStyle =
+    "mx-2 text-lg font-semibold flex items-center gap-2 py-2 px-3 rounded-xl transition-all duration-300 " +
+    "hover:bg-[#1da597]/10 hover:text-[#1da597] hover:shadow-sm";
 
   const links = (
     <>
-      <NavLink to="/" className={cuteLinkStyle}>
-        <FaHome className="animate-bounce-slow icon-wiggle text-[#1da597]" />{" "}
-        Home
+      <NavLink to="/" className={linkStyle}>
+        <FaHome className="text-[#1da597] text-xl" /> Home
       </NavLink>
 
-      <NavLink to="/about" className={cuteLinkStyle}>
-        <FaInfoCircle className="animate-bounce-slow icon-wiggle text-[#1da597]" />{" "}
-        About
+      <NavLink to="/about" className={linkStyle}>
+        <FaInfoCircle className="text-[#1da597] text-xl" /> About
       </NavLink>
 
-      <NavLink to="/families" className={cuteLinkStyle}>
-        <FaChild className="animate-bounce-slow icon-wiggle text-[#1da597]" />{" "}
-        Families
+      <NavLink to="/families" className={linkStyle}>
+        <FaChild className="text-[#1da597] text-xl" /> Families
       </NavLink>
 
-      <NavLink to="/schools" className={cuteLinkStyle}>
-        <FaSchool className="animate-bounce-slow icon-wiggle text-[#1da597]" />{" "}
-        Schools
+      <NavLink to="/schools" className={linkStyle}>
+        <FaSchool className="text-[#1da597] text-xl" /> Schools
       </NavLink>
 
-      <NavLink to="/professionals" className={cuteLinkStyle}>
-        <FaPuzzlePiece className="animate-bounce-slow icon-wiggle text-[#1da597]" />{" "}
-        Professionals
+      <NavLink to="/professionals" className={linkStyle}>
+        <FaPuzzlePiece className="text-[#1da597] text-xl" /> Professionals
       </NavLink>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-lg px-5 py-4 border border-gray-200 rounded-2xl transition-all duration-500">
+    <nav className="navbar bg-white/90 backdrop-blur-xl shadow-lg px-5 py-4 border border-gray-200 rounded-xl sticky top-0 z-50">
+      
       {/* LEFT — LOGO */}
       <div className="navbar-start">
         <NavLink
           to="/"
           className="text-3xl font-extrabold tracking-wide 
-            bg-[#1da597]
-            bg-clip-text text-transparent drop-shadow-sm hover:scale-110 transition-all duration-300"
+            text-[#1da597] hover:scale-110 transition-all duration-300"
         >
           KaiShifAI
         </NavLink>
       </div>
 
-      {/* CENTER (Desktop) */}
+      {/* CENTER — Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal">{links}</ul>
+        <ul className="flex items-center gap-1">{links}</ul>
       </div>
 
-      {/* RIGHT — Buttons */}
-      <div className="navbar-end">
-        {/* MOBILE DROPDOWN */}
+      {/* RIGHT SIDE */}
+      <div className="navbar-end flex items-center gap-3">
+
+        {/* MOBILE MENU */}
         <div className="dropdown dropdown-end lg:hidden">
-          <div
+          <button
             tabIndex={0}
-            role="button"
             className="btn btn-circle border-none shadow-md
-            bg-gradient-to-r from-cyan-400 to-cyan-300 
-            hover:scale-110 transition duration-300"
+            bg-[#1da597] hover:bg-[#178c80] text-white transition-all duration-300"
           >
-            <FaBars className="text-white text-xl" />
-          </div>
+            <FaBars className="text-xl" />
+          </button>
 
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content 
-            bg-white rounded-xl shadow-xl w-56 p-3 mt-3"
+            bg-white rounded-xl shadow-xl w-60 p-3 mt-3"
           >
             {links}
           </ul>
         </div>
 
-     
+        {/* GET KAI BUTTON */}
         <a
-         
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:flex items-center gap-2 rounded-4xl 
-            bg-gradient-to-r from-[#1da597]  to-[#1da597] text-white
-            px-5 py-3 text-sm font-bold shadow-md 
-            hover:scale-110 transition duration-300"
+          className="hidden lg:flex items-center gap-2 rounded-full cursor-pointer 
+            bg-[#1da597] text-white px-6 py-3 font-bold 
+            shadow-md hover:scale-110 hover:bg-[#178c80] transition-all duration-300"
         >
           Get Kai
         </a>
       </div>
-    </div>
+    </nav>
   );
 };
 
